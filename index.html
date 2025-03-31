@@ -5,60 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background: #333;
-            color: white;
-            padding: 15px;
-            text-align: center;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-        }
-        section {
-            padding: 20px;
-            text-align: center;
-        }
-        .project {
-            background: white;
-            margin: 20px auto;
-            padding: 15px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 500px;
-            cursor: pointer;
-        }
-        .hidden {
-            display: none;
-            margin-top: 10px;
-            text-align: left;
-        }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background: #333;
-            color: white;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -87,16 +33,12 @@
     <section id="projects">
         <h2>Compétences acquises</h2>
         <div class="project">
-            <h3 onclick="toggleProjectDetails('project2')">En 2e année</h3>
-            <div id="project2" class="hidden">
-                <p>Application des bonnes pratiques d'hygiène, diagramme de production, contrôle, maîtrise des équipements, etc...</p>
-            </div>
+            <h3><a href="projet_2e_annee.html" target="_blank">En 2e année</a></h3>
+            <p>Application des bonnes pratiques d'hygiène, diagramme de production, contrôle, maîtrise des équipements, etc...</p>
         </div>
         <div class="project">
-            <h3 onclick="toggleProjectDetails('project3')">En 3e année</h3>
-            <div id="project3" class="hidden">
-                <p>Innovation, validation d'essai, méthodologie, etc...</p>
-            </div>
+            <h3><a href="projet_3e_annee.html" target="_blank">En 3e année</a></h3>
+            <p>Innovation, validation d'essai, méthodologie, etc...</p>
         </div>
     </section>
     
@@ -129,16 +71,5 @@
     <footer>
         <p>&copy; 2025 Mon Portfolio</p>
     </footer>
-
-    <script>
-        function toggleProjectDetails(projectId) {
-            var project = document.getElementById(projectId);
-            if (project.style.display === "none" || project.style.display === "") {
-                project.style.display = "block";
-            } else {
-                project.style.display = "none";
-            }
-        }
-    </script>
 </body>
 </html>
