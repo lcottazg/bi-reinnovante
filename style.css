@@ -1,59 +1,87 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>Bienvenue sur mon Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="2e_annee.html" class="link-effect">2e Année</a></li>
-                <li><a href="3e_annee.html" class="link-effect">3e Année</a></li>
-                <li><a href="projection_future.html">Projection Future</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section>
-        <h2>À propos de moi</h2>
-        <div class="carousel">
-            <div class="carousel-container">
-                <div class="carousel-slide">
-                    <h3>Qui suis-je ?</h3>
-                    <p>Je m’appelle Laura COTTAZ-GARDÈRES, j’ai 24 ans et anciennement pâtissière...</p>
-                </div>
-                <div class="carousel-slide">
-                    <h3>Mes points forts</h3>
-                    <p>Mes principales compétences incluent l'hygiène, l'organisation de la production...</p>
-                </div>
-            </div>
-            <div class="carousel-buttons">
-                <button id="prev">&#10094;</button>
-                <button id="next">&#10095;</button>
-            </div>
-        </div>
-    </section>
-    
-    <script>
-        const carouselContainer = document.querySelector(".carousel-container");
-        const slides = document.querySelectorAll(".carousel-slide");
-        let index = 0;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
 
-        document.getElementById("next").addEventListener("click", function() {
-            index = (index + 1) % slides.length;
-            carouselContainer.style.transform = `translateX(-${index * 100}%)`;
-        });
+header {
+    background: #77DD77;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
 
-        document.getElementById("prev").addEventListener("click", function() {
-            index = (index - 1 + slides.length) % slides.length;
-            carouselContainer.style.transform = `translateX(-${index * 100}%)`;
-        });
-    </script>
-</body>
-</html>
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.project {
+    border: 2px solid #77DD77;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+.project:hover:not(#future .project) {
+    transform: scale(1.05); /* Effet de zoom */
+    box-shadow: 0px 4px 10px rgba(119, 221, 119, 0.5); /* Ombre verte pastel */
+    background-color: #e6f7e6; /* Léger changement de couleur */
+}
+
+.project h3 a {
+    text-decoration: none;
+    color: #77DD77;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.project h3 a:hover {
+    color: #5ba85b; /* Changement de couleur au survol */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label, input, textarea {
+    margin-bottom: 10px;
+}
+
+button {
+    background: #77DD77;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #5ba85b;
+}
