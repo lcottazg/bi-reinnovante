@@ -3,57 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Bienvenue sur mon Portfolio</h1>
+        <h1>Mon Portfolio</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="2e_annee.html" class="link-effect">2e Année</a></li>
-                <li><a href="3e_annee.html" class="link-effect">3e Année</a></li>
-                <li><a href="projection_future.html">Projection Future</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#projects">Compétences acquises</a></li>
+                <li><a href="#future">Projection future</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
     
-    <section>
+    <section id="about">
         <h2>À propos de moi</h2>
-        <div class="carousel">
-            <div class="carousel-container">
-                <div class="carousel-slide">
-                    <h3>Qui suis-je ?</h3>
-                    <p>Je m’appelle Laura COTTAZ-GARDÈRES, j’ai 24 ans et anciennement pâtissière...</p>
-                </div>
-                <div class="carousel-slide">
-                    <h3>Mes points forts</h3>
-                    <p>Mes principales compétences incluent l'hygiène, l'organisation de la production...</p>
-                </div>
-            </div>
-            <div class="carousel-buttons">
-                <button id="prev">&#10094;</button>
-                <button id="next">&#10095;</button>
-            </div>
+        <p><strong>Qui suis-je ?</strong><br>
+        Je m’appelle Laura COTTAZ--GARDÈRES, j’ai 24 ans et anciennement pâtissière.<br>
+        J’ai repris les études en choisissant le Bachelor génie biologique, parcours sciences de l'aliment car au cours des années je me suis découvert un véritable intérêt pour l’hygiène et la qualité dans le domaine agro-alimentaire.<br>
+        J'ai acquis au cours de ma formation, des connaissances pratiques et théoriques au sein d'une brasserie artisanale ainsi que pendant ma formation à l'IUT de La Rochelle.<br>
+        Mon parcours se caractérise par une forte passion pour l'innovation et la créativité, ainsi que la qualité.<br><br>
+        <strong>Mes points forts :</strong><br>
+        Mes principales compétences incluent l'hygiène, l'organisation de la production et la recherche de nouvelles idées. Je me distingue par ma capacité à travailler de manière rigoureuse, que ce soit seule ou en équipe, et à innover dans des projets relatifs à la science des aliments.</p>
+    </section>
+    
+    <section id="projects">
+        <h2>Compétences acquises</h2>
+        <div class="project">
+            <h3><a href="projet_2e_annee.html" target="_blank">En 2e année</a></h3>
+            <p>Application des bonnes pratiques d'hygiène, diagramme de production, contrôle, maîtrise des équipements, etc...</p>
+        </div>
+        <div class="project">
+            <h3><a href="projet_3e_annee.html" target="_blank">En 3e année</a></h3>
+            <p>Innovation, validation d'essai, méthodologie, etc...</p>
         </div>
     </section>
     
-    <script>
-        const carouselContainer = document.querySelector(".carousel-container");
-        const slides = document.querySelectorAll(".carousel-slide");
-        let index = 0;
-
-        document.getElementById("next").addEventListener("click", function() {
-            index = (index + 1) % slides.length;
-            carouselContainer.style.transform = `translateX(-${index * 100}%)`;
-        });
-
-        document.getElementById("prev").addEventListener("click", function() {
-            index = (index - 1 + slides.length) % slides.length;
-            carouselContainer.style.transform = `translateX(-${index * 100}%)`;
-        });
-    </script>
+    <section id="future">
+        <h2>Projection future</h2>
+        <div class="project">
+            <p><strong>Management :</strong><br>
+            Je vise à approfondir ma formation en gestion de la qualité, mais aussi approfondir mes connaissances en HSE.</p>
+            <p><strong>Innover :</strong><br>
+            À long terme, je souhaite contribuer à l'innovation en développant des produits écoresponsables, répondant aux attentes du marché en constante évolution.</p>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact</h2>
+        <form action="mailto:lauracg49@yahoo.com" method="post" enctype="text/plain">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Mon Portfolio</p>
+    </footer>
 </body>
 </html>
