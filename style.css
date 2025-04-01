@@ -1,29 +1,21 @@
-/* Reset CSS */
-* {
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-body {
     background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
-    padding: 20px;
 }
 
 header {
-    background: #35424a;
-    color: #fff;
-    padding: 20px;
+    background: #007BFF;
+    color: white;
+    padding: 15px 0;
     text-align: center;
-    border-radius: 10px;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    text-align: center;
 }
 
 nav ul li {
@@ -32,35 +24,45 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: white;
     text-decoration: none;
-    font-weight: bold;
+    font-size: 18px;
 }
 
 section {
-    background: #fff;
+    max-width: 800px;
+    margin: 20px auto;
     padding: 20px;
-    margin: 20px 0;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    color: #35424a;
-    margin-bottom: 15px;
 }
 
 .project {
-    background: #e3e3e3;
+    border: 2px solid #007BFF;
     padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 5px;
+    margin: 10px 0;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #f8f9fa;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: scale(1.05); /* Effet de zoom */
+    box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.5); /* Ombre bleutée */
+    background-color: #e3f2fd; /* Léger changement de couleur */
 }
 
 .project h3 a {
     text-decoration: none;
-    color: #35424a;
-    font-weight: bold;
+    color: #007BFF;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.project h3 a:hover {
+    color: #0056b3; /* Changement de couleur au survol */
 }
 
 form {
@@ -68,22 +70,13 @@ form {
     flex-direction: column;
 }
 
-label {
-    margin: 5px 0;
-    font-weight: bold;
-}
-
-input, textarea {
-    padding: 10px;
+label, input, textarea {
     margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 100%;
 }
 
 button {
-    background: #35424a;
-    color: #fff;
+    background: #007BFF;
+    color: white;
     padding: 10px;
     border: none;
     cursor: pointer;
@@ -91,14 +84,5 @@ button {
 }
 
 button:hover {
-    background: #1f2a30;
-}
-
-footer {
-    text-align: center;
-    margin-top: 20px;
-    padding: 10px;
-    background: #35424a;
-    color: white;
-    border-radius: 10px;
+    background: #0056b3;
 }
