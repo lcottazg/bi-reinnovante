@@ -6,12 +6,15 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 header {
     width: 100%;
     background-color: #4CAF50;
     padding: 1rem;
+    text-align: center;
 }
 
 nav ul {
@@ -20,10 +23,11 @@ nav ul {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 10px 15px;
 }
 
 nav ul li a {
@@ -33,19 +37,24 @@ nav ul li a {
 }
 
 section {
-    max-width: 90%;
+    max-width: 80%;
     padding: 20px;
+    box-sizing: border-box;
 }
 
 .image-section {
     max-width: 100%;
     height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 .carousel {
     max-width: 90%;
     overflow: hidden;
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .carousel-container {
@@ -55,6 +64,7 @@ section {
 
 .carousel-slide {
     min-width: 100%;
+    text-align: center;
 }
 
 .carousel-buttons button {
@@ -74,7 +84,7 @@ section {
 /* Responsive Design */
 @media (max-width: 1024px) {
     section {
-        max-width: 95%;
+        max-width: 90%;
     }
 }
 
@@ -82,10 +92,15 @@ section {
     nav ul {
         flex-direction: column;
         text-align: center;
+        padding: 0;
     }
 
     .carousel-slide h3, .carousel-slide p {
         font-size: 14px;
+    }
+
+    section {
+        max-width: 95%;
     }
 }
 
@@ -96,5 +111,10 @@ section {
 
     nav ul li {
         margin: 10px 0;
+    }
+
+    section {
+        max-width: 100%;
+        padding: 15px;
     }
 }
