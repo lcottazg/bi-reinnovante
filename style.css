@@ -1,90 +1,208 @@
-/* Reset général */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  background-color: #f9f9f9;
-  color: #333;
-  padding: 20px;
-}
-
-/* Conteneur principal */
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 20px;
-}
-
-/* Titres */
-h1, h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #2e7d32; /* Vert pastel foncé */
-}
-
-/* Conteneur de projets */
-.project-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-/* Chaque projet (2e année, 3e année, etc.) */
-.project {
-  background-color: #e8f5e9; /* Vert pastel clair */
-  border: 1px solid #cce5cc;
-  padding: 20px;
-  flex: 1 1 300px;
-  max-width: 500px;
-  border-radius: 12px;
-  transition: transform 0.2s ease;
-  text-align: left;
-}
-
-/* Effet au survol */
-.project:hover {
-  transform: scale(1.02);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* Images dans les projets */
-.project img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 15px;
-  border-radius: 8px;
-}
-
-/* Responsive mobile */
-@media (max-width: 768px) {
-  .project-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .project {
-    width: 100%;
-    max-width: 90%;
-  }
-}
-
-/* Liens cliquables sans soulignement */
-a.project {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* Styles optionnels pour "Management" et "Innover" s’ils utilisent la même classe */
-.projection-block {
-  background-color: #e8f5e9;
-  border: 1px solid #cce5cc;
-  padding: 20px;
-  border-radius: 12px;
-  margin-bottom: 20px;
-}
+/* Style général */
+ body {
+     font-family: 'Segoe UI', sans-serif;
+     margin: 0;
+     padding: 0;
+     background-color: #f6f6f6;
+     color: #333;
+     line-height: 1.6;
+ }
+ 
+ header {
+     background-color: #b8d8ba; /* vert pastel */
+     color: #2e2e2e;
+     padding: 2rem 1rem;
+     text-align: center;
+ }
+ 
+ header h1 {
+     margin: 0;
+     font-size: 2.5rem;
+ }
+ 
+ /* Navigation */
+ nav ul {
+     list-style: none;
+     padding: 0;
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
+     margin-top: 1rem;
+ }
+ 
+ nav ul li {
+     margin: 0 15px;
+ }
+ 
+ nav ul li a {
+     text-decoration: none;
+     color: #2e2e2e;
+     font-weight: 600;
+     padding: 8px 12px;
+     transition: background-color 0.3s;
+ }
+ 
+ nav ul li a:hover {
+     background-color: #d4e9d6;
+     border-radius: 5px;
+ }
+ 
+ /* Sections */
+ section {
+     padding: 40px 20px;
+     max-width: 1100px;
+     margin: auto;
+     background-color: white;
+     margin-bottom: 2rem;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+     border-radius: 8px;
+ }
+ 
+ section h2 {
+     color: #4c7c59;
+ }
+ 
+ /* Projets */
+ .project-container {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     gap: 20px;
+ }
+ 
+ .project {
+     background-color: #e8f5e9;
+     border: 1px solid #cce5cc;
+     padding: 20px;
+     width: 100%;
+     max-width: 450px;
+     border-radius: 8px;
+     transition: transform 0.2s ease;
+ }
+ 
+ .project:hover {
+     transform: translateY(-5px);
+     background-color: #d6ecd8;
+ }
+ 
+ .project h3 a {
+     color: #2e2e2e;
+     text-decoration: none;
+     font-size: 1.2rem;
+ }
+ 
+ .project h3 a:hover {
+     text-decoration: underline;
+ }
+ 
+ /* Formulaire de contact */
+ form {
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+     max-width: 500px;
+     margin: auto;
+ }
+ 
+ form input,
+ form textarea {
+     padding: 10px;
+     font-size: 1rem;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+ }
+ 
+ form button {
+     background-color: #4c7c59;
+     color: white;
+     padding: 10px;
+     border: none;
+     border-radius: 5px;
+     font-weight: bold;
+     cursor: pointer;
+     transition: background-color 0.3s;
+ }
+ 
+ form button:hover {
+     background-color: #3a5f44;
+ }
+ 
+ /* Footer */
+ footer {
+     text-align: center;
+     padding: 20px;
+     background-color: #b8d8ba;
+     color: #2e2e2e;
+ }
+ 
+ /* Responsive */
+ @media (max-width: 768px) {
+     nav ul {
+         flex-direction: column;
+     }
+ 
+     .project-container {
+         flex-direction: column;
+         align-items: center;
+     }
+ }
+ 
+ /* Bloc Projection future */
+ .future-grid {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 20px;
+     justify-content: center;
+ }
+ 
+ .future-block {
+     background-color: #e8f5e9;
+     border: 1px solid #cce5cc;
+     padding: 20px;
+     border-radius: 8px;
+     flex: 1 1 300px;
+     max-width: 500px;
+     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+     transition: transform 0.2s ease;
+ }
+ 
+ .future-block:hover {
+     transform: translateY(-4px);
+ }
+ 
+ .future-block h3 {
+     color: #4c7c59;
+     margin-top: 0;
+ }
+ 
+ .contact-form {
+   max-width: 600px;
+   margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+ }
+ 
+ .contact-form input,
+ .contact-form textarea {
+   padding: 0.75rem;
+   border: 1px solid #ccc;
+   border-radius: 8px;
+   font-size: 1rem;
+   background-color: #fdfdfd;
+ }
+ 
+ .contact-form button {
+   background-color: #9dcf9d;
+   color: #fff;
+   padding: 0.75rem;
+   border: none;
+   border-radius: 8px;
+   font-size: 1rem;
+   cursor: pointer;
+   transition: background-color 0.3s;
+ }
+ 
+ .contact-form button:hover {
+   background-color: #7bb77b;
+ }
