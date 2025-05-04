@@ -1,10 +1,21 @@
-
+/* Style basé sur le design de la page index - clair, neutre et responsive */
 body {
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    background-color: #fdfdfd;
     color: #333;
+}
+
+header, footer {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h1, h2, h3 {
+    color: #4e4e4e;
 }
 
 .container {
@@ -13,31 +24,53 @@ body {
     padding: 20px;
 }
 
-h1, h2 {
-    color: #4c7c59;
-    text-align: center;
-}
-
-h3 {
-    color: #4c7c59;
-}
-
-.competence-block {
-    background-color: #e8f5e9;
-    border: 1px solid #cce5cc;
+.section {
+    background-color: #ffffff;
+    margin: 20px 0;
+    padding: 20px;
     border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.section img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.card {
+    background-color: #fafafa;
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
     padding: 20px;
     margin-bottom: 20px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    transition: transform 0.2s ease;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.competence-block:hover {
-    transform: translateY(-3px);
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
 }
 
-@media (max-width: 768px) {
-    .competence-block {
+a {
+    color: #457a57;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    .card {
         padding: 15px;
+    }
+    h1 {
+        font-size: 1.8rem;
     }
 }
