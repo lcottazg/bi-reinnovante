@@ -1,60 +1,98 @@
+/* Base styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 100%;
+    background-color: #f7f7f7;
+    color: #333;
     box-sizing: border-box;
 }
 
+/* Header */
 header {
     width: 100%;
-    background-color: #4CAF50;
-    padding: 1rem;
-    text-align: center;
+    background-color: #a8d5ba; /* vert pastel */
+    padding: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #2e4636;
+}
+
+/* Navigation */
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    width: 100%;
+    justify-content: center;
+    background-color: #e9f5ef;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 nav ul li {
-    margin: 10px 15px;
+    margin: 10px 20px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: white;
+    color: #2e4636;
     font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s;
 }
 
+nav ul li a:hover {
+    background-color: #cbead6;
+}
+
+/* Sections */
 section {
-    max-width: 80%;
-    padding: 20px;
-    box-sizing: border-box;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    margin: 20px 0;
+    width: 85%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    text-align: left;
 }
 
+section h2 {
+    color: #2e4636;
+    margin-bottom: 1rem;
+}
+
+section p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Images */
 .image-section {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
+/* Carousel */
 .carousel {
     max-width: 90%;
     overflow: hidden;
     position: relative;
-    display: flex;
-    justify-content: center;
+    margin: 30px auto;
+    border-radius: 12px;
 }
 
 .carousel-container {
@@ -65,16 +103,21 @@ section {
 .carousel-slide {
     min-width: 100%;
     text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
 .carousel-buttons button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(46, 70, 54, 0.7);
     color: white;
     border: none;
-    padding: 10px;
+    padding: 10px 14px;
+    border-radius: 50%;
     cursor: pointer;
 }
 
@@ -84,35 +127,13 @@ section {
 /* Responsive Design */
 @media (max-width: 1024px) {
     section {
-        max-width: 90%;
+        width: 90%;
     }
 }
 
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
-        text-align: center;
-        padding: 0;
-    }
-
-    .carousel-slide h3, .carousel-slide p {
-        font-size: 14px;
-    }
-
-    section {
-        max-width: 95%;
-    }
-}
-
-@media (max-width: 600px) {
-    body {
-        font-size: 14px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        text-align: center;
-        padding: 0;
     }
 
     nav ul li {
@@ -120,20 +141,28 @@ section {
     }
 
     section {
-        max-width: 100%;
-        padding: 15px;
+        width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 15px;
     }
 
-    .carousel {
-        max-width: 100%;
+    header h1 {
+        font-size: 1.5rem;
     }
 
-    .carousel-container {
-        flex-direction: column;
+    nav ul {
+        padding: 10px 0;
     }
 
-    .image-section {
-        width: 100%;
-        height: auto;
+    section {
+        padding: 20px;
+    }
+
+    .carousel-buttons button {
+        padding: 8px;
     }
 }
