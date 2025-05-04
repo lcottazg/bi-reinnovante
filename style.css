@@ -104,9 +104,15 @@ section {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     body {
         font-size: 14px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
     }
 
     nav ul li {
@@ -116,5 +122,18 @@ section {
     section {
         max-width: 100%;
         padding: 15px;
+    }
+
+    .carousel {
+        max-width: 100%;
+    }
+
+    .carousel-container {
+        flex-direction: column;
+    }
+
+    .image-section {
+        width: 100%;
+        height: auto;
     }
 }
