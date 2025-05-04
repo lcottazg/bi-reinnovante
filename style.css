@@ -146,3 +146,31 @@ footer {
         align-items: center;
     }
 }
+
+/* Bloc Projection future */
+.future-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.future-block {
+    background-color: #e8f5e9;
+    border: 1px solid #cce5cc;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1 1 300px;
+    max-width: 500px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+}
+
+.future-block:hover {
+    transform: translateY(-4px);
+}
+
+.future-block h3 {
+    color: #4c7c59;
+    margin-top: 0;
+}
